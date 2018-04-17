@@ -7,6 +7,9 @@ import { MouseHOC } from "./HOC/Mouse";
 import { MovePlane } from "./HOC/Airplane";
 import List from "./HOC/List";
 
+import Airplane from "./RenderProps/Airplane";
+import WithMouse from "./RenderProps/WithMouse";
+
 const buttonStyle = {
   backgroundColor: "blue",
   padding: "10px",
@@ -37,6 +40,13 @@ class App extends Component {
         <MouseHOC />
         <MovePlane img="https://jundroo.blob.core.windows.net/simpleplanes/GameData/aircraft/352/vRIW46-TopView.png" />
         <List />
+        <WithMouse
+          render={props => (
+            <div>
+              <Airplane {...props} handleClick={this.handleAlert} />
+            </div>
+          )}
+        />
       </div>
     );
   }

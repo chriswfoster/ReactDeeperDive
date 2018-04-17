@@ -11,7 +11,7 @@ class Button extends Component {
           backgroundColor: this.props.style.backgroundColor,
           color: this.props.style.color
         }}
-        onClick={this.props.handleAlert}
+        onClick={this.props.clickHandler}
       >
         {this.props.children}
       </button>
@@ -26,8 +26,8 @@ Button.propTypes = {
     backgroundColor: PropTypes.string,
     color: PropTypes.string
   }),
-  handleAlert: PropTypes.func,
-  children: PropTypes.string
+  clickHandler: PropTypes.func,
+  children: PropTypes.string.isRequired
 };
 
 export default Button;

@@ -6,10 +6,10 @@ class Airplane extends Component {
     return (
       <div style={{ height: "400px", width: "100%", position: "relative" }}>
         <img
-          src="https://jundroo.blob.core.windows.net/simpleplanes/GameData/aircraft/352/vRIW46-TopView.png"
+          src={this.props.img}
           style={{
             position: "absolute",
-            top: this.props.mouse.y - 400,
+            top: this.props.mouse.y,
             left: this.props.mouse.x,
             width: "50px",
             height: "50px"

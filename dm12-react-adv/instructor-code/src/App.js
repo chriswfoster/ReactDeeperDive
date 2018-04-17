@@ -4,6 +4,8 @@ import "./App.css";
 import Button from "./Button";
 
 import { MouseHOC } from "./HOC/Mouse";
+import { MovePlane } from "./HOC/Airplane";
+import List from "./HOC/List";
 
 const buttonStyle = {
   backgroundColor: "blue",
@@ -33,6 +35,8 @@ class App extends Component {
           Super super Cool
         </Button>
         <MouseHOC />
+        <MovePlane img="https://jundroo.blob.core.windows.net/simpleplanes/GameData/aircraft/352/vRIW46-TopView.png" />
+        <List />
       </div>
     );
   }

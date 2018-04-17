@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import withMouse from "./withMouse";
+import withPeople from "./withPeople";
 
 class Mouse extends Component {
   render() {
@@ -13,4 +14,4 @@ class Mouse extends Component {
   }
 }
 
-export const MouseHOC = withMouse(Mouse);
+export const MouseHOC = withPeople(withMouse(Mouse));

@@ -3,6 +3,8 @@ import logo from "./logo.svg";
 import "./App.css";
 import Button from "./Button";
 
+import { MouseHOC } from "./HOC/Mouse";
+
 const buttonStyle = {
   backgroundColor: "blue",
   padding: "10px",
@@ -30,6 +32,7 @@ class App extends Component {
         >
           Super super Cool
         </Button>
+        <MouseHOC />
       </div>
     );
   }

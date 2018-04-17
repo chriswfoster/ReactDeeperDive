@@ -1,3 +1,11 @@
 import React from "react";
 
-const withMouse = Component => <Component />;
+const withMouse = Component => {
+  return class extends React.Component {
+    render() {
+      return <Component />;
+    }
+  };
+};
+
+export default withMouse;

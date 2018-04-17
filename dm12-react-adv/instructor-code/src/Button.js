@@ -10,6 +10,7 @@ class Button extends Component {
           backgroundColor: this.props.style.backgroundColor,
           color: this.props.style.color
         }}
+        onClick={this.props.handleAlert}
       >
         {this.props.children}
       </button>

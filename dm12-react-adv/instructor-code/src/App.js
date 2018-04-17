@@ -3,7 +3,17 @@ import logo from "./logo.svg";
 import "./App.css";
 import Button from "./Button";
 
+const buttonStyle = {
+  backgroundColor: "blue",
+  padding: "10px",
+  color: "#fff",
+  border: "5px solid red"
+};
+
 class App extends Component {
+  handleAlert() {
+    return alert("It was handled");
+  }
   render() {
     return (
       <div className="App">
@@ -11,7 +21,9 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">Welcome to React</h1>
         </header>
-        <Button>Click Here</Button>
+        <Button style={buttonStyle} handleAlert={this.handleAlert}>
+          Click Here
+        </Button>
       </div>
     );
   }

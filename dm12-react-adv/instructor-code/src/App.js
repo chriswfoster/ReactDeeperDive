@@ -5,7 +5,9 @@ import Button from "./Button";
 
 const buttonStyle = {
   backgroundColor: "blue",
-  color: "#fff"
+  padding: "10px",
+  color: "#fff",
+  border: "5px solid red"
 };
 
 class App extends Component {

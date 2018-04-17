@@ -5,3 +5,5 @@ class Button extends Component {
     return <button>{this.props.children}</button>;
   }
 }
+
+export default Button;

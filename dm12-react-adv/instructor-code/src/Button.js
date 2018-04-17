@@ -6,8 +6,8 @@ class Button extends Component {
     return (
       <button
         style={{
-          border: this.props.style.border,
-          padding: this.props.style.padding,
+          border: this.props.style.border || "",
+          padding: this.props.style.padding || "",
           backgroundColor: this.props.style.backgroundColor,
           color: this.props.style.color
         }}
@@ -20,7 +20,14 @@ class Button extends Component {
 }
 
 Button.propTypes = {
-    style: 
-}
+  style: PropTypes.shape({
+    border: PropTypes.string,
+    padding: PropTypes.string.isRequired,
+    backgroundColor: PropTypes.string,
+    color: PropTypes.string
+  }),
+  handleAlert: PropTypes.func,
+  children: PropTypes.string
+};
 
 export default Button;
